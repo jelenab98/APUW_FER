@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APUW-Lab1:</title>
+</head>
+<body>
+<p><strong>The following URLs are supported:</strong></p>
+<ul>
+    <li>&nbsp;<a href="http://127.0.0.1:8000/api/">Application&nbsp;</a>&nbsp;<ol>
+            <li><a href="http://127.0.0.1:8000/api/authors">Authors</a></li>
+            <li><a href="http://127.0.0.1:8000/api/quotes">Quotes</a></li>
+        </ol>
+    </li>
+    <li><a href="http://127.0.0.1:8000/admin/">Admin page</a></li>
+    <li><a href="http://127.0.0.1:8000/api-auth/login">Login page</a></li>
+</ul>
+<p><strong>CRUD methods and supported URLs:</strong></p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td style="width: 50%; background-color: rgb(204, 204, 204);">CRUD method<br></td>
+            <td style="width: 50%; background-color: rgb(204, 204, 204);">Explanation<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">GET /api/authors<br></td>
+            <td style="width: 50%;">Retrieves a list of all authors with their data (name and surname)<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">GET /api/authors/&lt;author_id&gt;<br></td>
+            <td style="width: 50%;">Retrieves information (name, surname) about author with the author_id<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">GET /api/quotes<br></td>
+            <td style="width: 50%;">Retrieves a list of all quotes with its data (message and author id who stated this message or null if the author is unknown or deleted)<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">GET /api/quotes/&lt;quote_id&gt;<br></td>
+            <td style="width: 50%;">Retrieves information about quote with the id quote_id<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">GET /api/authors/&lt;author_id&gt;/quotes<br></td>
+            <td style="width: 50%;">Retrieves all quotes stated by the person with the author_id <br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">GET /api/authors/&lt;author_id&gt;/quotes/&lt;quote_id&gt;<br></td>
+            <td style="width: 50%;">Retrieves a quotes with id quote_id stated by the person with the author_id <br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">POST /api/authors<br></td>
+            <td style="width: 50%;">Creates new author entry (name and surname)<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">PUT /api/authors/&lt;author_id&gt;<br></td>
+            <td style="width: 50%;">Updates information (name, surname) about author with the author_id<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">POST /api/quotes<br></td>
+            <td style="width: 50%;">Creates an quote with its data (message and author id who stated this message or null if the author is unknown or deleted)<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">PUT /api/quotes/&lt;quote_id&gt;<br></td>
+            <td style="width: 50%;">Updates information about quote with the id quote_id<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">POST /api/authors/&lt;author_id&gt;/quotes<br></td>
+            <td style="width: 50%;">Creates or updates an quote stated by the person with the author_id <br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">PUT /api/authors/&lt;author_id&gt;/quotes/&lt;quote_id&gt;<br></td>
+            <td style="width: 50%;">Updates a quote with id quote_id stated by the person with the author_id <br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">DELETE /api/authors/&lt;author_id&gt;<br></td>
+            <td style="width: 50%;">Deletes an author entry  with the author_id<br></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">DELETE /api/quotes/&lt;quote_id&gt;<br></td>
+            <td style="width: 50%;">Deletes a quote entry with the id quote_id<br></td>
+        </tr>
+             <tr>
+            <td style="width: 50%;">DELETE /api/authors/&lt;author_id&gt;/quotes/&lt;quote_id&gt;<br></td>
+            <td style="width: 50%;">Deletes a quote with id quote_id stated by the person with the author_id <br></td>
+        </tr>
+    </tbody>
+</table>
+<p>Documentation was also automatically created by Swagger and can be found <a href="http://127.0.0.1:8000/">here.</a></p>
+</body>
+</html>
